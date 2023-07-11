@@ -25,9 +25,9 @@ def xml_to_csv(path):
 
 def main():
     for folder in ['train','val']:
-        image_path = os.path.join(os.getcwd(), ('TFJS-Custom-Detection/' + folder))
+        image_path = os.path.join(os.getcwd(), ('dataset/' + folder))
         xml_df = xml_to_csv(image_path)
-        xml_df.to_csv(('TFJS-Custom-Detection/' + folder + '_labels.csv'), index=None)
+        xml_df.to_csv(('dataset/' + folder + '_labels.csv'), index=None)
         print('Successfully converted xml to csv.')
 
 
